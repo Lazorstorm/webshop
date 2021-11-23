@@ -23,6 +23,7 @@ img {
 }
 .bottom-container a {
     text-decoration: unset;
+    color: #b8b8b8;
 
 }
 .banner {
@@ -98,8 +99,20 @@ background-color: rgb(35, 31, 32);
     font-size: 12px;
     color: #5a5a5a;
 }
+.bottom-container a:hover {
+    color: #fff;
+}
 .bg-primary {
     background-color: rgb(35, 31, 32) !important;
+    transition: background-color 1s ease-in;
+}
+/* .bg-fade {
+    background-color: rgb(35, 31, 32) !important;
+    transition: background-color 1s ease-in;
+} */
+.enter-color {
+    background-color: rgba(192, 11, 57) !important;
+    transition: background-color 1s ease-in;
 }
 .filler-space {
     min-height: 16rem;
@@ -157,6 +170,10 @@ button {
     min-height: 264px;
     background: rgba(0,0,0,0.98);
     z-index: 0;
+}
+.full-screen-register a {
+    color: #fff;
+    text-decoration: none;
 }
 .full-screen-basket {
     position: absolute;
@@ -216,3 +233,6 @@ button {
     font-weight: normal;
     font-style: normal;
 }
+/* Popup box BEGIN */
+
+/* Popup box BEGIN */

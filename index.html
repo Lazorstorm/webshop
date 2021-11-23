@@ -63,9 +63,16 @@
                 <input id="login-password-confirm-box" name="password-confirm" required="" type="password"
                     autocomplete="current-password" placeholder="Confirm Password"><br>
                 <button class="buttonStyle" type="submit">Register</button>
-                <button class="buttonStyle" onclick="closePopup()">Cancel!</button>
+
             </form>
+            <p><br><a
+                    href="https://api.twitch.tv/kraken/oauth2/authorize?response_type=code&client_id=[YOUR_PUBLIC_CLIENT_ID]&redirect_uri=[RETURN_URL]&scope=[SCOPES_REQUIRES]"
+                    target="_blank">Connect
+                    With Twitch! <img class="ml-1" src="imgs/twitch-logo.png" width="25px" height="25px"
+                        alt="twitch logo"></a></p>
+            <button class="buttonStyle" onclick="closePopup()">Cancel!</button>
         </div>
+
         <div class="full-screen-basket hidden flex-container-center mb-3" id="basket">
             <p>
             <h1>These items are in your basket:</h1>
@@ -76,19 +83,19 @@
         <div class="d-flex justify-content-center banner">
             <div class="banner align-items-center mt-5 mb-5">
                 <div class="d-flex justify-content-center">
-                    <h4>BLACK-FRIDAY SALE</h4>
+                    <h4 id="sale1">BLACK-FRIDAY SALE</h4>
                 </div>
                 </br>
                 <div class="offer d-flex justify-content-center">
-                    <h2><b>UP TO 70% OFF ENTIRE STORE</b></h2>
+                    <h2 id="sale2"><b>UP TO 70% OFF ENTIRE STORE</b></h2>
                 </div>
                 <br>
                 <div class="offer d-flex justify-content-center">
-                    <h4>*Spend $100 and receive a $50 Gift Card!</h4>
+                    <h4 id="sale3">*Spend $100 and receive a $50 Gift Card!</h4>
                 </div>
             </div>
         </div>
-        <div class="content-box container-fluid">
+        <div class="content-box container-fluid" id="cont-box">
             <div class="row mt-5">
             </div>
             <div class="row">
@@ -97,7 +104,7 @@
                 <div class="col-lg-10 d-flex">
                     <ul class="list-group list-group-horizontal align-items-stretch flex-wrap">
                         <li class="list-group-item border-0">
-                            <div class="card text-white bg-primary mb-3" style="max-width: 20rem;">
+                            <div class="card text-white bg-primary mb-5" style="max-width: 20rem;">
                                 <div class="card-header">Featured Sample Pack
                                 </div>
                                 <div class="card-body">
@@ -107,13 +114,13 @@
                                 </div>
                                 <div class="card-footer">
                                     <button class="buyButton" onclick="addToBasket('Drum \'n Bass kit 001')">BUY NOW
-                                        <img src="imgs/cart.png" width="25px" height="25px"></button>
+                                        <img src="imgs/cart.png" width="20px" height="20px"></button>
                                     <button>DEMO</button>
                                 </div>
                             </div>
                         </li>
                         <li class="list-group-item border-0">
-                            <div class="card text-white bg-primary mb-3" style="max-width: 20rem;">
+                            <div class="card text-white bg-primary mb-5" style="max-width: 20rem;">
                                 <div class="card-header">Featured Preset Pack</div>
                                 <div class="card-body">
                                     <h5 class="card-title">Vital Bass preset kit 001<img src="imgs/vital-logo.png"
@@ -125,14 +132,14 @@
                                 </div>
                                 <div class="card-footer">
                                     <button class="buyButton" onclick="addToBasket('Vital Preset Kit 001')">BUY NOW <img
-                                            src="imgs/cart.png" width="25px" height="25px"></button>
+                                            src="imgs/cart.png" width="20px" height="20px"></button>
                                     <button>DEMO</button>
                                 </div>
 
                             </div>
                         </li>
                         <li class="list-group-item border-0">
-                            <div class="card text-white bg-primary mb-3" style="max-width: 20rem;">
+                            <div class="card text-white bg-primary mb-5" style="max-width: 20rem;">
                                 <div class="card-header">Featured Bundle</div>
                                 <div class="card-body">
                                     <h5 class="card-title">Drum 'n Bass Bundle 001</h5>
@@ -140,7 +147,7 @@
                                 </div>
                                 <div class="card-footer">
                                     <button class="buyButton" onclick="addToBasket('Bundle 001')">BUY NOW <img
-                                            src="imgs/cart.png" width="25px" height="25px"></button>
+                                            src="imgs/cart.png" width="20px" height="20px"></button>
                                     <button>DEMO</button>
                                 </div>
                             </div>
@@ -156,7 +163,7 @@
                                 </div>
                                 <div class="card-footer">
                                     <button class="buyButton" onclick="addToBasket('Drum \'n Bass kit 002')">BUY NOW
-                                        <img src="imgs/cart.png" width="25px" height="25px"></button>
+                                        <img src="imgs/cart.png" width="20px" height="20px"></button>
                                     <button>DEMO</button>
                                 </div>
                             </div>
@@ -174,7 +181,7 @@
                                 </div>
                                 <div class="card-footer">
                                     <button class="buyButton" onclick="addToBasket('Vital Preset Kit 002')">BUY NOW <img
-                                            src="imgs/cart.png" width="25px" height="25px"></button>
+                                            src="imgs/cart.png" width="20px" height="20px"></button>
                                     <button>DEMO</button>
                                 </div>
 
@@ -189,7 +196,7 @@
                                 </div>
                                 <div class="card-footer">
                                     <button class="buyButton" onclick="addToBasket('Bundle 002')">BUY NOW <img
-                                            src="imgs/cart.png" width="25px" height="25px"></button>
+                                            src="imgs/cart.png" width="20px" height="20px"></button>
                                     <button>DEMO</button>
                                 </div>
                             </div>
@@ -199,6 +206,7 @@
                 <div class="col-1">
                 </div>
             </div>
+        </div>
 
     </main>
     <section class="d-flex footer justify-content-center" id="footer-id">
@@ -210,26 +218,26 @@
                     <div class="row">
                         <div class="col-4">
                             <ul id="foot-1">
-                                <li><a>Home<</a>/li>
-                                <li><a>Sampl</a>epacks</li>
-                                <li><a>Prese</a>tpacks</li>
-                                <li><a>Bundl</a>es</li>
+                                <li><a href="#">Home</a></li>
+                                <li><a href="#">Samplepacks</a></li>
+                                <li><a href="#">Presetpacks</a></li>
+                                <li><a href="#">Bundles</a></li>
                             </ul>
                         </div>
                         <div class="col-4">
-                            <ul id="foot-1">
-                                <li><a>Suppo</a>rt</li>
-                                <li><a>Conta</a>ct</li>
-                                <li><a>Locat</a>ion</li>
-                                <li><a>Legal</a></li>
+                            <ul id="foot-2">
+                                <li><a href="#">Support</a></li>
+                                <li><a href="#">Contact</a></li>
+                                <li><a href="#">Location</a></li>
+                                <li><a href="#">Legal</a></li>
                             </ul>
                         </div>
                         <div class="col-4">
-                            <ul id="foot-1">
-                                <li><a>Test1</a></li>
-                                <li><a>Item2</a></li>
-                                <li><a>Item3</a></li>
-                                <li><a>Item4</a></li>
+                            <ul id="foot-3">
+                                <li><a href="#">Item1</a></li>
+                                <li><a href="#">Item2</a></li>
+                                <li><a href="#">Item3</a></li>
+                                <li><a href="#">Item4</a></li>
                             </ul>
                         </div>
                     </div>
@@ -239,8 +247,7 @@
             <div class="row">
                 <div class="col-12 text-white text-center">
                     <div class="footer-about-page">
-                        <h2>Lazorstorm Webshop</h2>
-                        <div id="|aboutContent">
+                        <div id="aboutContent">
                             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur, sed. Recusandae
                                 eveniet, placeat dolorem voluptatum ducimus voluptas quos dignissimos aut cupiditate
                                 quaerat
