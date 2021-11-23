@@ -21,11 +21,16 @@ img {
 .row {
     --bs-gutter-x: 0rem;
 }
+.bottom-container a {
+    text-decoration: unset;
+
+}
 .banner {
 background-color: rgb(35, 31, 32);
 }
 .card {
-    border: 1px solid rgb(0, 0, 0);
+    /* border: 1px solid rgb(0, 0, 0); */
+    min-height: 300px;
 }
 .card-header {
     color: yellow;
